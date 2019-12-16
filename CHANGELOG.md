@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.0...v1.0.1) (2019-12-16)
+
+#### Bug Fixes
+
+* **HowToGuides:** update incorrect package name ([c8efe03](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/c8efe039d6b0c1ad2cc7ed74bd3e0638d2ef32b2))
+  > The package name was missing the tilia prefix and therefore was not correct and provided incorrect installation instructions.
+
 ## 1.0.0 (2019-12-16)
 
 #### Features
