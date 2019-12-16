@@ -1,4 +1,4 @@
-﻿namespace VRTK.Prefabs.Locomotion.Teleporters
+﻿namespace Tilia.Locomotors.Teleporter
 {
     using Malimbe.PropertySerializationAttribute;
     using Malimbe.XmlDocumentationAttribute;
