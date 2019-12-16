@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.1...v1.0.2) (2019-12-16)
+
+#### Bug Fixes
+
+* **package.json:** provide correct version to shader dependency ([3a2bc9f](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/3a2bc9fa15508cf8503c37a8ce89c604991a8cd7))
+  > The wrong shader package version was used due to an issue with the README on the shader repo displaying the wrong version. This has now been fixed by providing the correct version for the shader package dependency.
+
 ### [1.0.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.0...v1.0.1) (2019-12-16)
 
 #### Bug Fixes
