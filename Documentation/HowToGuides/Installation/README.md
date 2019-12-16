@@ -32,7 +32,7 @@ The `Locomotors.Teleporter.Instant` and `Locomotors.Teleporter.Dash` prefabs pro
 * Adjust the [project manifest file][Project-Manifest] `manifest.json` in a text editor.
   * Ensure `https://registry.npmjs.org/` is part of `scopedRegistries`.
     * Ensure `io.extendreality` is part of `scopes`.
-  * Add `io.extendreality.locomotors.teleporter.unity` to `dependencies`, stating the latest version.
+  * Add `io.extendreality.tilia.locomotors.teleporter.unity` to `dependencies`, stating the latest version.
 
   A minimal example ends up looking like this. Please note that the version `X.Y.Z` stated here is to be replaced with [the latest released version][Latest-Release] which is currently [![Release][Version-Release]][Releases].
   ```json
@@ -47,7 +47,7 @@ The `Locomotors.Teleporter.Instant` and `Locomotors.Teleporter.Dash` prefabs pro
       }
     ],
     "dependencies": {
-      "io.extendreality.locomotors.teleporter.unity": "X.Y.Z",
+      "io.extendreality.tilia.locomotors.teleporter.unity": "X.Y.Z",
       ...
     }
   }
