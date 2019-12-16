@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.3](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.2...v1.0.3) (2019-12-16)
+
+#### Bug Fixes
+
+* **Scripts:** update namespace to correct tilia namespace ([7a87008](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/7a87008ba0160f9e09d846a19834a92a4adfaa41))
+  > The code still had the VRTK.Prefabs namespace as it was copied over from the VRTK.Prefabs repo, this has now been updated to be in line with the Tilia repo name instead.
+
 ### [1.0.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.1...v1.0.2) (2019-12-16)
 
 #### Bug Fixes
