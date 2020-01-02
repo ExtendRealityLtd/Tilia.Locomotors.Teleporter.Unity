@@ -41,7 +41,7 @@ Please refer to the Extend Reality [Code of Conduct].
 Code released under the [MIT License][License].
 
 [License-Badge]: https://img.shields.io/github/license/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity.svg
-[Version-Release]: https://img.shields.io/github/release/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity.Unity.svg
+[Version-Release]: https://img.shields.io/github/release/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity.svg
 [project coding conventions]: https://github.com/ExtendRealityLtd/.github/blob/master/CONVENTIONS/UNITY3D.md
 
 [Tilia-Image]: https://user-images.githubusercontent.com/1029673/67681496-5bf10700-f985-11e9-9413-e61801b6eab5.png
