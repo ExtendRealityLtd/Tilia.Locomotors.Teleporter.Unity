@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.6](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.5...v1.0.6) (2020-01-02)
+
+#### Bug Fixes
+
+* **README.md:** provide correct URL for version release badge ([2e77507](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/2e77507ca53128567ee806d13fa1ee6be29a28a3))
+  > The URL in the version release badge was not valid and therefore the version number badge was not displaying.
+
 ### [1.0.5](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.4...v1.0.5) (2020-01-02)
 
 #### Miscellaneous Chores
