@@ -1,5 +1,36 @@
 # Changelog
 
+## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.6...v1.1.0) (2020-04-14)
+
+#### Features
+
+* **HowToGuides:** add guide for adding teleporter ([8e536a4](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/8e536a4f499de42d884dfd8870dadfd19b2dff8e))
+  > added guided to demonstrate how to add a teleporter and to move around with the pointer.
+
+#### Bug Fixes
+
+* **HowToGuides:** add missing .meta files for guide ([ce62132](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/ce62132e9a81f7182f9d505c2e98a1b04d9e8528))
+  > The Adding A Teleporter guide has no Unity meta files for any of the files within the guide. These have now been generated and added.
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.11.0 to 1.12.0 ([e3501e1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/e3501e10be53f04fe7addfb14d1a560f6de11213))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.11.0 to 1.12.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.11.0...v1.12.0)
+  > 
+  > Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+* **deps:** bump io.extendreality.zinnia.unity from 1.12.0 to 1.14.0 ([cf656e6](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/cf656e6f4e5de7337fa0ff4db4ffeec7d72f6588))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.12.0 to 1.14.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.12.0...v1.14.0)
+  > 
+  > Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+* **deps:** bump io.extendreality.zinnia.unity from 1.14.0 to 1.14.1 ([f86060b](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/f86060b58c9e48193c647be46b01005e37d998ab))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.14.0 to 1.14.1. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.14.0...v1.14.1)
+  > 
+  > Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+* **deps:** bump io.extendreality.zinnia.unity from 1.14.1 to 1.15.0 ([6adc08c](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/6adc08c66684443ccebe9afb0dfeff1fd8ce64a1))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.14.1 to 1.15.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.14.1...v1.15.0)
+  > 
+  > Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
 ### [1.0.6](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.5...v1.0.6) (2020-01-02)
 
 #### Bug Fixes
