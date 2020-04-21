@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.1.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.1.0...v1.1.1) (2020-04-21)
+
+#### Bug Fixes
+
+* **Prefabs:** allow teleport to same location as previous location ([b9ed929](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/b9ed9293aec99eabce9ad5fe887624a04e9983bd))
+  > Zinnia 1.16.0 has some changes to the SurfaceLocator and the TransformPropertyApplier that allows both components to still operate if the previous location is the same as the current loaction.
+  > 
+  > This limitation in Zinnia 1.15.0 meant that you could not teleport to the same position that you were currently on, which was fine in most cases but there are some occasions where you do want to teleport back to where you're currently standing. This is now the default setting, but its still possible to switch the settings to have it work the way it did before.
+
 ## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.0.6...v1.1.0) (2020-04-14)
 
 #### Features
