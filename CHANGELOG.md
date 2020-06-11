@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.1.6...v1.2.0) (2020-06-11)
+
+#### Features
+
+* **prefab:** add ability to customise snap to floor thresholds ([61bd64e](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/61bd64e00c548ee7f6d80ac64e391790cae1ca4e))
+  > The snap to floor threshold has now been exposed in the facade and the snap to floor mechanism has been updated so two Surface Change Actions are now used. The first one determines if a snap to the nearest floor can even take place (if the distance between the old and new floor exceeds the threshold). The second one determines if the snap teleport will blink the view.
+  > 
+  > This enables now certain small changes in floor height not to teleport the target at all and to only blink the view when the floor height has changed substantially enough.
+
 ### [1.1.6](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.1.5...v1.1.6) (2020-06-08)
 
 #### Miscellaneous Chores
