@@ -4,6 +4,7 @@
     using Malimbe.XmlDocumentationAttribute;
     using System.Collections.Generic;
     using UnityEngine;
+    using Zinnia.Action;
     using Zinnia.Data.Attribute;
     using Zinnia.Data.Enum;
     using Zinnia.Data.Type;
@@ -71,6 +72,18 @@
         [Serialized]
         [field: DocumentedByXml, Restricted]
         public List<CameraColorOverlay> CameraColorOverlays { get; protected set; } = new List<CameraColorOverlay>();
+        /// <summary>
+        /// The <see cref="SurfaceChangeAction"/> that holds the threshold of whether a snap to floor should even occur.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml, Restricted]
+        public SurfaceChangeAction SnapToFloorThresholdController { get; protected set; }
+        /// <summary>
+        /// The <see cref="SurfaceChangeAction"/> that holds the threshold of whether a blink should occur when snapping to floor.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml, Restricted]
+        public SurfaceChangeAction SnapToFloorBlinkThresholdController { get; protected set; }
         #endregion
 
         /// <summary>
@@ -178,6 +191,17 @@
             }
         }
 
+        /// <summary>
+        /// Configures the surface change actions that determine the snap to floor functionality.
+        /// </summary>
+        /// <param name="snapToFloorThreshold">The threshold of whether the change distance should do a new snap to the found floor.</param>
+        /// <param name="snapToFloorBlinkThreshold">The threshold of whether to blink the view.</param>
+        public virtual void ConfigureSurfaceChangeActions(float snapToFloorThreshold, float snapToFloorBlinkThreshold)
+        {
+            SnapToFloorThresholdController.ChangeDistance = snapToFloorThreshold;
+            SnapToFloorBlinkThresholdController.ChangeDistance = snapToFloorBlinkThreshold;
+        }
+
         protected virtual void OnEnable()
         {
             ConfigureSurfaceLocatorAliases();
@@ -185,6 +209,7 @@
             ConfigureTransformPropertyAppliers();
             ConfigureCameraColorOverlays();
             ConfigureRotationAbility(Facade.ApplyDestinationRotation);
+            ConfigureSurfaceChangeActions(Facade.SnapToFloorThreshold, Facade.SnapToFloorBlinkThreshold);
         }
 
         /// <summary>

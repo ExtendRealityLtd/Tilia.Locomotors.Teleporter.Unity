@@ -73,6 +73,21 @@
         public RuleContainer TargetValidity { get; set; }
         #endregion
 
+        #region Floor Snap Settings
+        /// <summary>
+        /// The distance between the previous floor and current floor to determine if a snap to the new floor is required.
+        /// </summary>
+        [Serialized]
+        [field: Header("Floor Snap Settings"), DocumentedByXml]
+        public float SnapToFloorThreshold { get; set; } = float.Epsilon;
+        /// <summary>
+        /// The distance between the previous floor and current floor to determine if the screen should blink when snapping to the new floor.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml]
+        public float SnapToFloorBlinkThreshold { get; set; } = 0.3f;
+        #endregion
+
         #region Teleporter Events
         /// <summary>
         /// Emitted when the teleporting is about to initiate.
@@ -184,6 +199,24 @@
         protected virtual void OnAfterTargetValidityChange()
         {
             Configuration.ConfigureSurfaceLocatorRules();
+        }
+
+        /// <summary>
+        /// Called after <see cref="SnapToFloorThreshold"/> has been changed.
+        /// </summary>
+        [CalledAfterChangeOf(nameof(SnapToFloorThreshold))]
+        protected virtual void OnAfterSnapToFloorThresholdChange()
+        {
+            Configuration.ConfigureSurfaceChangeActions(SnapToFloorThreshold, SnapToFloorBlinkThreshold);
+        }
+
+        /// <summary>
+        /// Called after <see cref="SnapToFloorBlinkThreshold"/> has been changed.
+        /// </summary>
+        [CalledAfterChangeOf(nameof(SnapToFloorBlinkThreshold))]
+        protected virtual void OnAfterSnapToFloorBlinkThresholdChange()
+        {
+            Configuration.ConfigureSurfaceChangeActions(SnapToFloorThreshold, SnapToFloorBlinkThreshold);
         }
     }
 }
