@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.2.0...v1.2.1) (2020-06-21)
+
+#### Bug Fixes
+
+* **Documentation:** apply style guidelines ([3d5ef4f](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/3d5ef4ffd0de93c72d009df58804a7edb53e108c))
+  > The guide has had the style guidelines applied to it to make it more consistent.
+
 ## [1.2.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.1.6...v1.2.0) (2020-06-11)
 
 #### Features
