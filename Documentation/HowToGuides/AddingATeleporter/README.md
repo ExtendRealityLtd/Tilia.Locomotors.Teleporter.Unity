@@ -47,7 +47,7 @@ If the scene is set up with multiple SDK Camera Rigs due to wanting to support d
 
 This is where the `CameraRigs.TrackedAlias` prefab helps out. The `CameraRigs.TrackedAlias` prefab provides aliases for the common virtual player GameObjects such as the Play Area, Headset and Controllers.
 
-Expand the `CameraRigs.TrackedAlias` GameObject in the Unity Hierarchy to expose the child GameObjects then drag and drop the `CameraRigs.TrackedAlias -> PlayAreaAlias` GameObject into the `Target parameter` on the `Teleporter Facade` component.
+Expand the `CameraRigs.TrackedAlias` GameObject in the Unity Hierarchy to expose the child GameObjects then drag and drop the `CameraRigs.TrackedAlias -> Aliases -> PlayAreaAlias` GameObject into the `Target` parameter on the `Teleporter Facade` component.
 
 ![Drag And Drop PlayArea Alias Into Target Event](assets/images/DragAndDropPlayAreaAliasIntoTargetEvent.png)
 
@@ -69,7 +69,7 @@ The user may actually expect when they teleport to be standing in the exact loca
 
 The `Offset` parameter on the `Teleporter Facade` component helps with this situation. The `Offset` parameter determines another GameObject that can be used to describe this offset to take into consideration when moving the Target, in this case the offset is the difference between the user’s Headset position in relation to their Play Area.
 
-So to provide this offset data to the Teleporter we simply need to drag and drop the `CameraRigs.TrackedAlias -> HeadsetAlias` GameObject into the `Offset` parameter on the `Teleporter Facade` component.
+So to provide this offset data to the Teleporter we simply need to drag and drop the `CameraRigs.TrackedAlias -> Aliases -> HeadsetAlias` GameObject into the `Offset` parameter on the `Teleporter Facade` component.
 
 ![Drag And Drop Headset Alias Into Offset Event](assets/images/DragAndDropHeadsetAliasIntoOffsetEvent.png)
 
@@ -77,7 +77,7 @@ So to provide this offset data to the Teleporter we simply need to drag and drop
 
 Both the `Locomotors.Teleporter.Instant` and `Locomotors.Teleporter.Dash` have the ability to fade the screen in and out by doing a Camera Blink whenever an instant location change occurs. This instant location change occurs on moving to the destination location for the `Locomotors.Teleporter.Instant` prefab and in both prefabs when the Teleporter snaps to the nearest floor to prevent the user walking out into space above a valid floor.
 
-To perform this Camera Blink, the Teleporter needs to know about the cameras in the scene to apply the fade to. The `Camera Validity` parameter on the `Teleporter Facade` component allows us to specify a simple way of linking this up. The `CameraRigs.TrackedAlias` prefab contains a `Rule` of all known scene cameras on the `CameraRigs.TrackedAlias -> SceneCameras` GameObject so drag and drop the `CameraRigs.TrackedAlias -> SceneCameras` GameObject into the `Camera Validity` parameter on the `Teleporter Facade` component.
+To perform this Camera Blink, the Teleporter needs to know about the cameras in the scene to apply the fade to. The `Camera Validity` parameter on the `Teleporter Facade` component allows us to specify a simple way of linking this up. The `CameraRigs.TrackedAlias` prefab contains a `Rule` of all known scene cameras on the `CameraRigs.TrackedAlias -> SceneCameras` GameObject so drag and drop the `CameraRigs.TrackedAlias -> Aliases -> SceneCameras` GameObject into the `Camera Validity` parameter on the `Teleporter Facade` component.
 
 ![Drag And Drop SceneCameras Into Camera Validity](assets/images/DragAndDropSceneCamerasIntoCameraValidity.png)
 
@@ -93,13 +93,13 @@ For this example we will set up the pointer to use the simulator controls utiliz
 
 Select the `Indictors.ObjectPointers.Curved` prefab and so we can change the `Activation Action` parameter on the `Pointer Facade` component.
 
-Expand `CameraRigs.SpatialSimulator -> Input -> Control Objects Input -> Right Controller Input -> Buttons`.
+Expand `CameraRigs.SpatialSimulator -> Input -> ControlObjectsInput -> RightControllerInput -> Buttons`.
 
-`Button Two` is the right mouse button and we'll use this to activate our pointer so drag and drop the `Button Two` GameObject into the `Activation Action` parameter on the `Pointer Facade` component.
+`ButtonTwo` is the right mouse button and we'll use this to activate our pointer so drag and drop the `ButtonTwo` GameObject into the `Activation Action` parameter on the `Pointer Facade` component.
 
 ![Drag And Drop Button 2 Into Activation Action](assets/images/DragAndDropButton2IntoActivationAction.png)
 
-`Button One` is the left mouse button and we'll use this to make a selection with our pointer so drag and drop the `Button One` GameObject into the `Selection Action` parameter on the `Pointer Facade` component.
+`ButtonOne` is the left mouse button and we'll use this to make a selection with our pointer so drag and drop the `ButtonOne` GameObject into the `Selection Action` parameter on the `Pointer Facade` component.
 
 ![Drag And Drop Button  Into Selected Action](assets/images/DragAndDropButton1IntoSelectedAction.png)
 
@@ -107,15 +107,13 @@ Expand `CameraRigs.SpatialSimulator -> Input -> Control Objects Input -> Right C
 
 The `Indicators.ObjectPointers.Curved` prefab will now emit the destination location data whenever the user selects with the pointer via pressing the left mouse button so all we need to do is hook up that selection event to call the Teleporter.
 
-Click the `+` symbol in the bottom right corner of the `Selected` event parameter on the `Pointer Facade` component found on the `Indicators.ObjectPointer.Curved` GameObject.
+Select the `Indicators.ObjectPointer.Curved` GameObject from the Unity Hierarchy and click the `+` symbol in the bottom right corner of the `Selected` event parameter on the `Pointer Facade` component.
 
-![Adding Selected Event](assets/images/AddingSelectedEvent.png)
- 
- Then drag and drop the `Locomotors.Teleporter.Instant` GameObject into the box that appears and displays `None (Object)`. 
- 
+Drag and drop the `Locomotors.Teleporter.Instant` GameObject into the event listener box that appears on the `Selected` event parameter on the `Pointer Facade` component that displays `None (Object)`.
+
  ![Drag And Drop Locomotors TeleporterInstant Into Box Displaying None](assets/images/DragAndDropLocomotorsTeleporterInstantIntoBoxDisplayingNone.png)
 
-Select a `Function` to perform when the `Selected` event is emitted. For this example, select `Teleporter Facade -> Teleport` (be sure to select `Dynamic EventData - Teleport` for this example).
+Select a function to perform when the `Selected` event is emitted. For this example, select the `Teleporter Facade -> Teleport` function (be sure to select `Dynamic float - Teleport` for this example).
 
 ![Changing The Function To Teleport](assets/images/ChangingTheFunctionToTeleport.png)
 
