@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.2.1...v1.3.0) (2020-07-03)
+
+#### Features
+
+* **API:** add auto-generated API documentation ([724c2c4](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/724c2c4634be1df45ad338b0315166d111081bef))
+  > The API documentation is auto generated with docfx and converted to markdown via turndown in a custom nodejs script.
+
+#### Bug Fixes
+
+* **package.json:** add docfx.json file ([cc8a9f2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/cc8a9f2828928be7550093aefa7139972f2ab0d7))
+  > The docfx.json file was missing from the package.json causing the build process to fail. It has now been added.
+
 ### [1.2.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.2.0...v1.2.1) (2020-06-21)
 
 #### Bug Fixes
