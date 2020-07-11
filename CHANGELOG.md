@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.3.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.3.1...v1.3.2) (2020-07-11)
+
+#### Bug Fixes
+
+* **Facade:** use extension method to set enum value ([2e4e9ca](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/2e4e9caaeeefe105aae9e96516d20eb74e9556f6))
+  > The SetOffsetUsage method now uses the Zinnia EnumExtensions helper method to set the value of the enum by the index instead of repeating the same logic.
+
 ### [1.3.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.3.0...v1.3.1) (2020-07-11)
 
 #### Miscellaneous Chores
