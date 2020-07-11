@@ -7,6 +7,7 @@
     using UnityEngine;
     using Zinnia.Data.Attribute;
     using Zinnia.Data.Type;
+    using Zinnia.Extension;
     using Zinnia.Rule;
     using Zinnia.Tracking.Modification;
 
@@ -143,7 +144,7 @@
         /// <param name="offsetTypeIndex">The index of the <see cref="OffsetType"/>.</param>
         public virtual void SetOffsetUsage(int offsetTypeIndex)
         {
-            OffsetUsage = (OffsetType)Mathf.Clamp(offsetTypeIndex, 0, System.Enum.GetValues(typeof(OffsetType)).Length);
+            OffsetUsage = EnumExtensions.GetByIndex<OffsetType>(offsetTypeIndex);
         }
 
         /// <summary>
