@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.3.9](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.3.8...v1.3.9) (2020-12-11)
+
+#### Bug Fixes
+
+* **HowToGuides:** apply document styling guidelines ([dbefd45](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/dbefd4530c02e13f580daf7b565d643a00672e5b))
+  > The document style guidelines have been updated and now have been applied to the guides in this repo.
+
 ### [1.3.8](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.3.7...v1.3.8) (2020-11-01)
 
 #### Miscellaneous Chores
