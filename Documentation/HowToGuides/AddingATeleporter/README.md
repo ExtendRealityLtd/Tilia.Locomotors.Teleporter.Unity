@@ -18,26 +18,26 @@ There are two main types of teleporting:
 
 ## Prerequisites
 
-* [Add Tilia.Indicators.ObjectPointers.Unity -> Indicators.ObjectPointers.Curved] prefab to the scene Hierarchy.
+* [Add Tilia.Indicators.ObjectPointers.Unity -> Indicators.ObjectPointers.Curved] prefab to the scene hierarchy.
 * [Install the Tilia.Locomotors.Teleporter.Unity] package dependency in to your [Unity] project.
 
 ## Let's Start
 
 ### Step 1
 
-Delete `Input.UnityInputManager.ButtonAction` GameObject from the Unity hierarchy then select `Indicators.ObjectPointers.Curved` GameObject and set the `Activation Action` parameter back to `none`.
+Delete `Input.UnityInputManager.ButtonAction` GameObject from the Unity Hierarchy window then select `Indicators.ObjectPointers.Curved` GameObject and set the `Activation Action` parameter back to `none`.
 
 ![Setting Activation Action to None](assets/images/SettingActivationActiontoNone.png)
 
 ### Step 2
 
-Expand the `Tilia Locomotors Teleporter Unity` Package directory in the Unity Project window and then select `Packages -> Tilia Locomotors Teleporter Unity -> Runtime -> Prefabs` directory. Then drag and drop the `Locomotors.Teleporter.Instant` prefab into the Hierarchy window.
+Expand the `Tilia Locomotors Teleporter Unity` package directory in the Unity Project window and then select `Packages -> Tilia Locomotors Teleporter Unity -> Runtime -> Prefabs` directory. Then drag and drop the `Locomotors.Teleporter.Instant` prefab into the Unity Hierarchy window.
 
 ![Drag And Drop Locomotors Teleport Dash Into Hierachy](assets/images/DragAndDropLocomotorsTeleportInstantIntoHierachy.png)
 
 ### Step 3
 
-Select the `Locomotors.Teleporter.Instant` prefab in the Unity Hierarchy and change the `Teleporter Facade` component to configure the base functionality of the Teleporter.
+Select the `Locomotors.Teleporter.Instant` prefab in the Unity Hierarchy window and change the `Teleporter Facade` component to configure the base functionality of the Teleporter.
 
 We must specify some data so the teleporter knows what to move when we teleport and how to move it.
 
@@ -47,7 +47,7 @@ If the scene is set up with multiple SDK Camera Rigs due to wanting to support d
 
 This is where the `CameraRigs.TrackedAlias` prefab helps out. The `CameraRigs.TrackedAlias` prefab provides aliases for the common virtual player GameObjects such as the Play Area, Headset and Controllers.
 
-Expand the `CameraRigs.TrackedAlias` GameObject in the Unity Hierarchy to expose the child GameObjects then drag and drop the `CameraRigs.TrackedAlias -> Aliases -> PlayAreaAlias` GameObject into the `Target` parameter on the `Teleporter Facade` component.
+Expand the `CameraRigs.TrackedAlias` GameObject in the Unity Hierarchy window to expose the child GameObjects then drag and drop the `CameraRigs.TrackedAlias -> Aliases -> PlayAreaAlias` GameObject into the `Target` parameter on the `Teleporter Facade` component.
 
 ![Drag And Drop PlayArea Alias Into Target Event](assets/images/DragAndDropPlayAreaAliasIntoTargetEvent.png)
 
@@ -85,7 +85,7 @@ To perform this Camera Blink, the Teleporter needs to know about the cameras in 
 
 Now we have a fully working Teleporter in the scene, we just need a way to tell the Teleporter to move to the desired destination location.
 
-We already have a Pointer prefab in our Unity Hierarchy so there is a way of marking out a destination location on valid areas of the virtual world. We just need to hook up the Pointer prefab to tell the Teleporter prefab to move to where it is pointing.
+We already have a Pointer prefab in our Unity Hierarchy window so there is a way of marking out a destination location on valid areas of the virtual world. We just need to hook up the Pointer prefab to tell the Teleporter prefab to move to where it is pointing.
 
 Let’s set up the Pointer prefab in the scene so it will tell the Teleporter to teleport our user to the Pointer destination location when the `Selection Action` occurs.
 
@@ -107,7 +107,7 @@ Expand `CameraRigs.SpatialSimulator -> Input -> ControlObjectsInput -> RightCont
 
 The `Indicators.ObjectPointers.Curved` prefab will now emit the destination location data whenever the user selects with the pointer via pressing the left mouse button so all we need to do is hook up that selection event to call the Teleporter.
 
-Select the `Indicators.ObjectPointer.Curved` GameObject from the Unity Hierarchy and click the `+` symbol in the bottom right corner of the `Selected` event parameter on the `Pointer Facade` component.
+Select the `Indicators.ObjectPointer.Curved` GameObject from the Unity Hierarchy window and click the `+` symbol in the bottom right corner of the `Selected` event parameter on the `Pointer Facade` component.
 
 Drag and drop the `Locomotors.Teleporter.Instant` GameObject into the event listener box that appears on the `Selected` event parameter on the `Pointer Facade` component that displays `None (Object)`.
 
