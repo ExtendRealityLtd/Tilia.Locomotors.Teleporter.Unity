@@ -7,6 +7,10 @@ Sets up the Teleport Prefab based on the provided user settings.
 * [Inheritance]
 * [Namespace]
 * [Syntax]
+* [Fields]
+  * [cachedLocators]
+  * [cachedSnapToFloorBlinkThreshold]
+  * [resetCachedDataRoutine]
 * [Properties]
   * [CameraColorOverlays]
   * [Facade]
@@ -23,6 +27,7 @@ Sets up the Teleport Prefab based on the provided user settings.
   * [ConfigureRotationAbility(Boolean)]
   * [ConfigureSurfaceChangeActions(Single, Single)]
   * [ConfigureSurfaceLocatorAliases()]
+  * [ConfigureSurfaceLocatorOffsets()]
   * [ConfigureSurfaceLocatorRules()]
   * [ConfigureTransformPropertyAppliers()]
   * [DisableRotations()]
@@ -30,6 +35,7 @@ Sets up the Teleport Prefab based on the provided user settings.
   * [NotifyTeleported(TransformPropertyApplier.EventData)]
   * [NotifyTeleporting(TransformPropertyApplier.EventData)]
   * [OnEnable()]
+  * [ResetOffsetAtEndOfFrame()]
   * [Teleport(TransformData)]
 
 ## Details
@@ -47,6 +53,38 @@ Sets up the Teleport Prefab based on the provided user settings.
 
 ```
 public class TeleporterConfigurator : MonoBehaviour
+```
+
+### Fields
+
+#### cachedLocators
+
+A SurfaceLocator collection to store cached versions that get mutated but need changing back after process.
+
+##### Declaration
+
+```
+protected List<SurfaceLocator> cachedLocators
+```
+
+#### cachedSnapToFloorBlinkThreshold
+
+the Facade.SnapToFloorBlinkThreshold value before it is mutated.
+
+##### Declaration
+
+```
+protected float cachedSnapToFloorBlinkThreshold
+```
+
+#### resetCachedDataRoutine
+
+The routine for resetting cached data.
+
+##### Declaration
+
+```
+protected Coroutine resetCachedDataRoutine
 ```
 
 ### Properties
@@ -206,6 +244,16 @@ Configures the surface locator aliases with the offset provided in the facade.
 public virtual void ConfigureSurfaceLocatorAliases()
 ```
 
+#### ConfigureSurfaceLocatorOffsets()
+
+Configures the surface locator rules with the valid targets provided in the facade.
+
+##### Declaration
+
+```
+public virtual void ConfigureSurfaceLocatorOffsets()
+```
+
 #### ConfigureSurfaceLocatorRules()
 
 Configures the surface locator rules with the valid targets provided in the facade.
@@ -286,6 +334,22 @@ public virtual void NotifyTeleporting(TransformPropertyApplier.EventData data)
 protected virtual void OnEnable()
 ```
 
+#### ResetOffsetAtEndOfFrame()
+
+Resets the data mutated by the destination offset update to the original cached values.
+
+##### Declaration
+
+```
+protected virtual IEnumerator ResetOffsetAtEndOfFrame()
+```
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Collections.IEnumerator | An Enumerator to manage the running of the Coroutine. |
+
 #### Teleport(TransformData)
 
 Attempts to teleport the [Target].
@@ -308,6 +372,10 @@ public virtual void Teleport(TransformData destination)
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
 [Syntax]: #Syntax
+[Fields]: #Fields
+[cachedLocators]: #cachedLocators
+[cachedSnapToFloorBlinkThreshold]: #cachedSnapToFloorBlinkThreshold
+[resetCachedDataRoutine]: #resetCachedDataRoutine
 [Properties]: #Properties
 [CameraColorOverlays]: #CameraColorOverlays
 [Facade]: #Facade
@@ -324,6 +392,7 @@ public virtual void Teleport(TransformData destination)
 [ConfigureRotationAbility(Boolean)]: #ConfigureRotationAbilityBoolean
 [ConfigureSurfaceChangeActions(Single, Single)]: #ConfigureSurfaceChangeActionsSingle-Single
 [ConfigureSurfaceLocatorAliases()]: #ConfigureSurfaceLocatorAliases
+[ConfigureSurfaceLocatorOffsets()]: #ConfigureSurfaceLocatorOffsets
 [ConfigureSurfaceLocatorRules()]: #ConfigureSurfaceLocatorRules
 [ConfigureTransformPropertyAppliers()]: #ConfigureTransformPropertyAppliers
 [DisableRotations()]: #DisableRotations
@@ -331,4 +400,5 @@ public virtual void Teleport(TransformData destination)
 [NotifyTeleported(TransformPropertyApplier.EventData)]: #NotifyTeleportedTransformPropertyApplier.EventData
 [NotifyTeleporting(TransformPropertyApplier.EventData)]: #NotifyTeleportingTransformPropertyApplier.EventData
 [OnEnable()]: #OnEnable
+[ResetOffsetAtEndOfFrame()]: #ResetOffsetAtEndOfFrame
 [Teleport(TransformData)]: #TeleportTransformData
