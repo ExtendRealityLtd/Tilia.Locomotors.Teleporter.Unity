@@ -2,6 +2,7 @@
 {
     using Malimbe.PropertySerializationAttribute;
     using Malimbe.XmlDocumentationAttribute;
+    using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
     using Zinnia.Action;
@@ -87,6 +88,19 @@
         #endregion
 
         /// <summary>
+        /// A <see cref="SurfaceLocator"/> collection to store cached versions that get mutated but need changing back after process.
+        /// </summary>
+        protected List<SurfaceLocator> cachedLocators = new List<SurfaceLocator>();
+        /// <summary>
+        /// the <see cref="Facade.SnapToFloorBlinkThreshold"/> value before it is mutated.
+        /// </summary>
+        protected float cachedSnapToFloorBlinkThreshold;
+        /// <summary>
+        /// The routine for resetting cached data.
+        /// </summary>
+        protected Coroutine resetCachedDataRoutine;
+
+        /// <summary>
         /// Attempts to teleport the <see cref="TeleporterFacade.Target"/>.
         /// </summary>
         /// <param name="destination">The location to attempt to teleport to.</param>
@@ -141,6 +155,35 @@
             foreach (SurfaceLocator currentLocator in SurfaceLocatorRules)
             {
                 currentLocator.TargetValidity = Facade.TargetValidity;
+            }
+        }
+
+        /// <summary>
+        /// Configures the surface locator rules with the valid targets provided in the facade.
+        /// </summary>
+        public virtual void ConfigureSurfaceLocatorOffsets()
+        {
+            Facade.gameObject.SetActive(false);
+
+            foreach (SurfaceLocator currentLocator in SurfaceLocatorRules)
+            {
+                Vector3 newOffset = Facade.DestinationOffset;
+                if (Facade.DestinationOffset.Equals(Vector3.zero))
+                {
+                    cachedLocators.Add(currentLocator);
+                    newOffset = Vector3.one * (currentLocator.PositionChangedEqualityThreshold + float.Epsilon);
+                }
+                currentLocator.DestinationOffset = newOffset;
+            }
+
+            cachedSnapToFloorBlinkThreshold = Facade.SnapToFloorBlinkThreshold;
+            Facade.SnapToFloorBlinkThreshold = 0f;
+
+            Facade.gameObject.SetActive(true);
+
+            if (resetCachedDataRoutine == null)
+            {
+                resetCachedDataRoutine = StartCoroutine(ResetOffsetAtEndOfFrame());
             }
         }
 
@@ -232,6 +275,24 @@
             {
                 alias.ApplyTransformations |= TransformProperties.Rotation;
             }
+        }
+
+        /// <summary>
+        /// Resets the data mutated by the destination offset update to the original cached values.
+        /// </summary>
+        /// <returns>An Enumerator to manage the running of the Coroutine.</returns>
+        protected virtual IEnumerator ResetOffsetAtEndOfFrame()
+        {
+            yield return new WaitForEndOfFrame();
+
+            Facade.SnapToFloorBlinkThreshold = cachedSnapToFloorBlinkThreshold;
+            foreach (SurfaceLocator currentLocator in cachedLocators)
+            {
+                currentLocator.DestinationOffset = Vector3.zero;
+            }
+
+            cachedLocators.Clear();
+            resetCachedDataRoutine = null;
         }
     }
 }

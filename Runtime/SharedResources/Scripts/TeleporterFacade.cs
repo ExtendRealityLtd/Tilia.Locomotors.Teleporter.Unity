@@ -87,6 +87,12 @@
         [Serialized]
         [field: DocumentedByXml]
         public float SnapToFloorBlinkThreshold { get; set; } = 0.3f;
+        /// <summary>
+        /// The position amount to offset the destination teleport position.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml]
+        public Vector3 DestinationOffset { get; set; }
         #endregion
 
         #region Teleporter Events
@@ -218,6 +224,15 @@
         protected virtual void OnAfterSnapToFloorBlinkThresholdChange()
         {
             Configuration.ConfigureSurfaceChangeActions(SnapToFloorThreshold, SnapToFloorBlinkThreshold);
+        }
+
+        /// <summary>
+        /// Called after <see cref="DestinationOffset"/> has been changed.
+        /// </summary>
+        [CalledAfterChangeOf(nameof(DestinationOffset))]
+        protected virtual void OnAfterDestinationOffsetChange()
+        {
+            Configuration.ConfigureSurfaceLocatorOffsets();
         }
     }
 }

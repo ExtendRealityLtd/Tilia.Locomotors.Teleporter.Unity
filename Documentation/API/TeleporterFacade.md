@@ -14,6 +14,7 @@ The public interface into the Teleporter Prefab.
   * [ApplyDestinationRotation]
   * [CameraValidity]
   * [Configuration]
+  * [DestinationOffset]
   * [Offset]
   * [OffsetUsage]
   * [SnapToFloorBlinkThreshold]
@@ -23,6 +24,7 @@ The public interface into the Teleporter Prefab.
 * [Methods]
   * [OnAfterApplyDestinationRotationChange()]
   * [OnAfterCameraValidityChange()]
+  * [OnAfterDestinationOffsetChange()]
   * [OnAfterOffsetChange()]
   * [OnAfterOffsetUsageChange()]
   * [OnAfterSnapToFloorBlinkThresholdChange()]
@@ -105,6 +107,16 @@ The linked Internal Setup.
 public TeleporterConfigurator Configuration { get; protected set; }
 ```
 
+#### DestinationOffset
+
+The position amount to offset the destination teleport position.
+
+##### Declaration
+
+```
+public Vector3 DestinationOffset { get; set; }
+```
+
 #### Offset
 
 The offset to compensate the teleported target position by for both floor snapping and position movement.
@@ -185,6 +197,16 @@ Called after [CameraValidity] has been changed.
 
 ```
 protected virtual void OnAfterCameraValidityChange()
+```
+
+#### OnAfterDestinationOffsetChange()
+
+Called after [DestinationOffset] has been changed.
+
+##### Declaration
+
+```
+protected virtual void OnAfterDestinationOffsetChange()
 ```
 
 #### OnAfterOffsetChange()
@@ -317,6 +339,7 @@ public virtual void Teleport(TransformData destination)
 [Offset]: TeleporterFacade.md#Offset
 [ApplyDestinationRotation]: TeleporterFacade.md#ApplyDestinationRotation
 [CameraValidity]: TeleporterFacade.md#CameraValidity
+[DestinationOffset]: TeleporterFacade.md#DestinationOffset
 [Offset]: TeleporterFacade.md#Offset
 [OffsetUsage]: TeleporterFacade.md#OffsetUsage
 [SnapToFloorBlinkThreshold]: TeleporterFacade.md#SnapToFloorBlinkThreshold
@@ -338,6 +361,7 @@ public virtual void Teleport(TransformData destination)
 [ApplyDestinationRotation]: #ApplyDestinationRotation
 [CameraValidity]: #CameraValidity
 [Configuration]: #Configuration
+[DestinationOffset]: #DestinationOffset
 [Offset]: #Offset
 [OffsetUsage]: #OffsetUsage
 [SnapToFloorBlinkThreshold]: #SnapToFloorBlinkThreshold
@@ -347,6 +371,7 @@ public virtual void Teleport(TransformData destination)
 [Methods]: #Methods
 [OnAfterApplyDestinationRotationChange()]: #OnAfterApplyDestinationRotationChange
 [OnAfterCameraValidityChange()]: #OnAfterCameraValidityChange
+[OnAfterDestinationOffsetChange()]: #OnAfterDestinationOffsetChange
 [OnAfterOffsetChange()]: #OnAfterOffsetChange
 [OnAfterOffsetUsageChange()]: #OnAfterOffsetUsageChange
 [OnAfterSnapToFloorBlinkThresholdChange()]: #OnAfterSnapToFloorBlinkThresholdChange
