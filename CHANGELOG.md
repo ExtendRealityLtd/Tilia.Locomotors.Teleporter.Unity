@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.3.10...v1.4.0) (2020-12-13)
+
+#### Features
+
+* **Facade:** add destination offset property ([3517a86](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/3517a86cbe9f433b2163795ed49b9b7e0d26ddc5))
+  > The new destination offset property allows the teleport destination to be offset by a given position so it is easier to raise and lower the character avatar against the found floor surface.
+
 ### [1.3.10](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.3.9...v1.3.10) (2020-12-12)
 
 #### Miscellaneous Chores
