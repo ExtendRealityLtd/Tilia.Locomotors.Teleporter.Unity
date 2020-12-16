@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.4.0...v1.5.0) (2020-12-16)
+
+#### Features
+
+* **Facade:** allow teleport to given Vector3 ([53d1334](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/53d13341636e728d2be9df3dc4eb4f7b5250b363))
+  > A new `Teleport` method has been added that simply takes a Vector3 as the property and will auto create the relevant Transform to use in the teleport, then destroy it at the end of the method call.
+
 ## [1.4.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.3.10...v1.4.0) (2020-12-13)
 
 #### Features
