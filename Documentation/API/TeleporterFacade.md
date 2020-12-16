@@ -35,6 +35,7 @@ The public interface into the Teleporter Prefab.
   * [Teleport(GameObject)]
   * [Teleport(Transform)]
   * [Teleport(TransformData)]
+  * [Teleport(Vector3)]
 
 ## Details
 
@@ -333,6 +334,22 @@ public virtual void Teleport(TransformData destination)
 | --- | --- | --- |
 | TransformData | destination | The location to attempt to teleport to. |
 
+#### Teleport(Vector3)
+
+Attempts to teleport the [Target] to the given world position.
+
+##### Declaration
+
+```
+public virtual void Teleport(Vector3 destinationPosition)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| Vector3 | destinationPosition | n/a |
+
 [Tilia.Locomotors.Teleporter]: README.md
 [Target]: TeleporterFacade.md#Target
 [TeleporterConfigurator]: TeleporterConfigurator.md
@@ -348,6 +365,7 @@ public virtual void Teleport(TransformData destination)
 [TargetValidity]: TeleporterFacade.md#TargetValidity
 [OffsetUsage]: TeleporterFacade.md#OffsetUsage
 [TeleporterFacade.OffsetType]: TeleporterFacade.OffsetType.md
+[Target]: TeleporterFacade.md#Target
 [Target]: TeleporterFacade.md#Target
 [Target]: TeleporterFacade.md#Target
 [Target]: TeleporterFacade.md#Target
@@ -382,3 +400,4 @@ public virtual void Teleport(TransformData destination)
 [Teleport(GameObject)]: #TeleportGameObject
 [Teleport(Transform)]: #TeleportTransform
 [Teleport(TransformData)]: #TeleportTransformData
+[Teleport(Vector3)]: #TeleportVector3

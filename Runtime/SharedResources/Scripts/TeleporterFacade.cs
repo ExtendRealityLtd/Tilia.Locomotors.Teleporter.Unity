@@ -145,6 +145,19 @@
         }
 
         /// <summary>
+        /// Attempts to teleport the <see cref="Target"/> to the given world position.
+        /// </summary>
+        /// <param name="destination">The world position to attempt to teleport to.</param>
+        public virtual void Teleport(Vector3 destinationPosition)
+        {
+            GameObject transformLocation = new GameObject();
+            TransformData destination = new TransformData(transformLocation.transform);
+            destination.PositionOverride = destinationPosition;
+            Teleport(destination);
+            Destroy(transformLocation);
+        }
+
+        /// <summary>
         /// Sets <see cref="OffsetUsage"/>.
         /// </summary>
         /// <param name="offsetTypeIndex">The index of the <see cref="OffsetType"/>.</param>
