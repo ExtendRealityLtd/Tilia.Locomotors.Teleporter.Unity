@@ -31,9 +31,7 @@ Delete `Input.UnityInputManager.ButtonAction` GameObject from the Unity Hierarch
 
 ### Step 2
 
-Expand the `Tilia Locomotors Teleporter Unity` package directory in the Unity Project window and then select `Packages -> Tilia Locomotors Teleporter Unity -> Runtime -> Prefabs` directory. Then drag and drop the `Locomotors.Teleporter.Instant` prefab into the Unity Hierarchy window.
-
-![Drag And Drop Locomotors Teleport Dash Into Hierachy](assets/images/DragAndDropLocomotorsTeleportInstantIntoHierachy.png)
+Add a `Locomotors.Teleporter.Instant` prefab to the Unity project hierarchy by selecting `GameObject -> Tilia -> Prefabs -> Locomotors -> Teleporter -> Locomotors.Teleporter.Instant` from the Unity main top menu.
 
 ### Step 3
 
