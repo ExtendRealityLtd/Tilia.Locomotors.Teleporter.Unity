@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.4](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.6.3...v1.6.4) (2021-06-10)
+
+#### Bug Fixes
+
+* **Materials:** update fade material to use better shader ([1934e48](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/1934e486ad4dccc01f594bce555fa44fb54f83b0))
+  > The new TransparentColorBlockout shader is a better, more simpler shader to use for screen fading and it is also compatible with the URP approach to screen fading.
+
 ### [1.6.3](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.6.2...v1.6.3) (2021-06-10)
 
 #### Miscellaneous Chores
