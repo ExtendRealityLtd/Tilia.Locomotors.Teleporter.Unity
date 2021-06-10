@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.6.3](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.6.2...v1.6.3) (2021-06-10)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.utilities.shaders.unity ([8145885](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/8145885795ef980ff6b7e70102d66f96ccbe59df))
+  > Bumps [io.extendreality.tilia.utilities.shaders.unity](https://github.com/ExtendRealityLtd/Tilia.Utilities.Shaders.Unity) from 1.1.0 to 1.2.0. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Utilities.Shaders.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Utilities.Shaders.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Utilities.Shaders.Unity/compare/v1.1.0...v1.2.0)
+* **README.md:** update title logo to related-media repo ([a93a5e5](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/a93a5e506eb9ee184a1be00ede9c418f14154ab8))
+  > The title logo is now located on the related-media repo.
+
 ### [1.6.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.6.1...v1.6.2) (2021-05-09)
 
 #### Miscellaneous Chores
