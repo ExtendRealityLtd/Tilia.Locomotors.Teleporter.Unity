@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.11](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.6.10...v1.6.11) (2022-01-03)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.39.0 to 1.40.0 ([530ef2a](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/530ef2a10e8f53df8c91a2880e88e865363256b3))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.39.0 to 1.40.0. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.39.0...v1.40.0)
+
 ### [1.6.10](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.6.9...v1.6.10) (2021-12-03)
 
 #### Miscellaneous Chores
