@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.6.17...v1.7.0) (2022-03-02)
+
+#### Features
+
+* **package.json:** add information urls to package ([1cc6ad5](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/1cc6ad52d33f5de667daf81ae0f3d0db215779c7))
+  > The changelog, documentation and license url has been added to the package.json as these are used within the Unity package manager.
+
 ### [1.6.17](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.6.16...v1.6.17) (2022-02-14)
 
 #### Miscellaneous Chores
