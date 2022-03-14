@@ -96,6 +96,10 @@
         /// </summary>
         protected float cachedSnapToFloorBlinkThreshold;
         /// <summary>
+        /// Whether the <see cref="Facade.SnapToFloorBlinkThreshold"/> can be changed and affects the configuration.
+        /// </summary>
+        protected bool allowSnapToFloorBlinkThresholdSet = true;
+        /// <summary>
         /// The routine for resetting cached data.
         /// </summary>
         protected Coroutine resetCachedDataRoutine;
@@ -163,8 +167,6 @@
         /// </summary>
         public virtual void ConfigureSurfaceLocatorOffsets()
         {
-            Facade.gameObject.SetActive(false);
-
             foreach (SurfaceLocator currentLocator in SurfaceLocatorRules)
             {
                 Vector3 newOffset = Facade.DestinationOffset;
@@ -176,10 +178,9 @@
                 currentLocator.DestinationOffset = newOffset;
             }
 
+            allowSnapToFloorBlinkThresholdSet = false;
             cachedSnapToFloorBlinkThreshold = Facade.SnapToFloorBlinkThreshold;
             Facade.SnapToFloorBlinkThreshold = 0f;
-
-            Facade.gameObject.SetActive(true);
 
             if (resetCachedDataRoutine == null)
             {
@@ -241,6 +242,11 @@
         /// <param name="snapToFloorBlinkThreshold">The threshold of whether to blink the view.</param>
         public virtual void ConfigureSurfaceChangeActions(float snapToFloorThreshold, float snapToFloorBlinkThreshold)
         {
+            if (!allowSnapToFloorBlinkThresholdSet)
+            {
+                return;
+            }
+
             SnapToFloorThresholdController.ChangeDistance = snapToFloorThreshold;
             SnapToFloorBlinkThresholdController.ChangeDistance = snapToFloorBlinkThreshold;
         }
@@ -249,10 +255,13 @@
         {
             ConfigureSurfaceLocatorAliases();
             ConfigureSurfaceLocatorRules();
+            ConfigureSurfaceLocatorOffsets();
             ConfigureTransformPropertyAppliers();
             ConfigureCameraColorOverlays();
             ConfigureRotationAbility(Facade.ApplyDestinationRotation);
             ConfigureSurfaceChangeActions(Facade.SnapToFloorThreshold, Facade.SnapToFloorBlinkThreshold);
+            ConfigureSnapToFloor();
+            allowSnapToFloorBlinkThresholdSet = true;
         }
 
         /// <summary>
@@ -285,6 +294,7 @@
         {
             yield return new WaitForEndOfFrame();
 
+            allowSnapToFloorBlinkThresholdSet = true;
             Facade.SnapToFloorBlinkThreshold = cachedSnapToFloorBlinkThreshold;
             foreach (SurfaceLocator currentLocator in cachedLocators)
             {
