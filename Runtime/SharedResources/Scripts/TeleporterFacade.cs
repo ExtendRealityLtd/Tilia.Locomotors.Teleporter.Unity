@@ -76,10 +76,16 @@
 
         #region Floor Snap Settings
         /// <summary>
-        /// The distance between the previous floor and current floor to determine if a snap to the new floor is required.
+        /// Whether to always attempt to teleport the <see cref="Target"/> to the nearest found floor every frame.
         /// </summary>
         [Serialized]
         [field: Header("Floor Snap Settings"), DocumentedByXml]
+        public bool SnapToFloorEnabled { get; set; } = true;
+        /// <summary>
+        /// The distance between the previous floor and current floor to determine if a snap to the new floor is required.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml]
         public float SnapToFloorThreshold { get; set; } = float.Epsilon;
         /// <summary>
         /// The distance between the previous floor and current floor to determine if the screen should blink when snapping to the new floor.
@@ -219,6 +225,15 @@
         protected virtual void OnAfterTargetValidityChange()
         {
             Configuration.ConfigureSurfaceLocatorRules();
+        }
+
+        /// <summary>
+        /// Called after <see cref="SnapToFloorEnabled"/> has been changed.
+        /// </summary>
+        [CalledAfterChangeOf(nameof(SnapToFloorEnabled))]
+        protected virtual void OnAfterSnapToFloorEnabledChange()
+        {
+            Configuration.ConfigureSnapToFloor();
         }
 
         /// <summary>

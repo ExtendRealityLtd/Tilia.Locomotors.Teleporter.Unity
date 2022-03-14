@@ -8,6 +8,7 @@ Sets up the Teleport Prefab based on the provided user settings.
 * [Namespace]
 * [Syntax]
 * [Fields]
+  * [allowSnapToFloorBlinkThresholdSet]
   * [cachedLocators]
   * [cachedSnapToFloorBlinkThreshold]
   * [resetCachedDataRoutine]
@@ -16,6 +17,7 @@ Sets up the Teleport Prefab based on the provided user settings.
   * [Facade]
   * [ModifyTeleporter]
   * [SnapToFloorBlinkThresholdController]
+  * [SnapToFloorContainer]
   * [SnapToFloorThresholdController]
   * [SurfaceLocatorAliases]
   * [SurfaceLocatorRules]
@@ -25,6 +27,7 @@ Sets up the Teleport Prefab based on the provided user settings.
 * [Methods]
   * [ConfigureCameraColorOverlays()]
   * [ConfigureRotationAbility(Boolean)]
+  * [ConfigureSnapToFloor()]
   * [ConfigureSurfaceChangeActions(Single, Single)]
   * [ConfigureSurfaceLocatorAliases()]
   * [ConfigureSurfaceLocatorOffsets()]
@@ -56,6 +59,16 @@ public class TeleporterConfigurator : MonoBehaviour
 ```
 
 ### Fields
+
+#### allowSnapToFloorBlinkThresholdSet
+
+Whether the Facade.SnapToFloorBlinkThreshold can be changed and affects the configuration.
+
+##### Declaration
+
+```
+protected bool allowSnapToFloorBlinkThresholdSet
+```
 
 #### cachedLocators
 
@@ -127,6 +140,16 @@ The SurfaceChangeAction that holds the threshold of whether a blink should occur
 
 ```
 public SurfaceChangeAction SnapToFloorBlinkThresholdController { get; protected set; }
+```
+
+#### SnapToFloorContainer
+
+The GameObject that contains the snap to floor controller logic.
+
+##### Declaration
+
+```
+public GameObject SnapToFloorContainer { get; protected set; }
 ```
 
 #### SnapToFloorThresholdController
@@ -216,6 +239,16 @@ public virtual void ConfigureRotationAbility(bool shouldRotate)
 | Type | Name | Description |
 | --- | --- | --- |
 | System.Boolean | shouldRotate | n/a |
+
+#### ConfigureSnapToFloor()
+
+Configures the snap to floor logic based on the Facade.SnapToFloorEnabled setting.
+
+##### Declaration
+
+```
+public virtual void ConfigureSnapToFloor()
+```
 
 #### ConfigureSurfaceChangeActions(Single, Single)
 
@@ -373,6 +406,7 @@ public virtual void Teleport(TransformData destination)
 [Namespace]: #Namespace
 [Syntax]: #Syntax
 [Fields]: #Fields
+[allowSnapToFloorBlinkThresholdSet]: #allowSnapToFloorBlinkThresholdSet
 [cachedLocators]: #cachedLocators
 [cachedSnapToFloorBlinkThreshold]: #cachedSnapToFloorBlinkThreshold
 [resetCachedDataRoutine]: #resetCachedDataRoutine
@@ -381,6 +415,7 @@ public virtual void Teleport(TransformData destination)
 [Facade]: #Facade
 [ModifyTeleporter]: #ModifyTeleporter
 [SnapToFloorBlinkThresholdController]: #SnapToFloorBlinkThresholdController
+[SnapToFloorContainer]: #SnapToFloorContainer
 [SnapToFloorThresholdController]: #SnapToFloorThresholdController
 [SurfaceLocatorAliases]: #SurfaceLocatorAliases
 [SurfaceLocatorRules]: #SurfaceLocatorRules
@@ -390,6 +425,7 @@ public virtual void Teleport(TransformData destination)
 [Methods]: #Methods
 [ConfigureCameraColorOverlays()]: #ConfigureCameraColorOverlays
 [ConfigureRotationAbility(Boolean)]: #ConfigureRotationAbilityBoolean
+[ConfigureSnapToFloor()]: #ConfigureSnapToFloor
 [ConfigureSurfaceChangeActions(Single, Single)]: #ConfigureSurfaceChangeActionsSingle-Single
 [ConfigureSurfaceLocatorAliases()]: #ConfigureSurfaceLocatorAliases
 [ConfigureSurfaceLocatorOffsets()]: #ConfigureSurfaceLocatorOffsets

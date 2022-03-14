@@ -40,6 +40,12 @@
         [Serialized]
         [field: DocumentedByXml, Restricted]
         public TransformPropertyApplier ModifyTeleporter { get; protected set; }
+        /// <summary>
+        /// The <see cref="GameObject"/> that contains the snap to floor controller logic.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml, Restricted]
+        public GameObject SnapToFloorContainer { get; protected set; }
         #endregion
 
         #region Alias Settings
@@ -249,6 +255,14 @@
 
             SnapToFloorThresholdController.ChangeDistance = snapToFloorThreshold;
             SnapToFloorBlinkThresholdController.ChangeDistance = snapToFloorBlinkThreshold;
+        }
+
+        /// <summary>
+        /// Configures the snap to floor logic based on the <see cref="Facade.SnapToFloorEnabled"/> setting.
+        /// </summary>
+        public virtual void ConfigureSnapToFloor()
+        {
+            SnapToFloorContainer.SetActive(Facade.SnapToFloorEnabled);
         }
 
         protected virtual void OnEnable()
