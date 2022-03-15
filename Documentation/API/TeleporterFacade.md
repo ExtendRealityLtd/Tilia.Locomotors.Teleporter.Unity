@@ -18,6 +18,7 @@ The public interface into the Teleporter Prefab.
   * [Offset]
   * [OffsetUsage]
   * [SnapToFloorBlinkThreshold]
+  * [SnapToFloorEnabled]
   * [SnapToFloorThreshold]
   * [Target]
   * [TargetValidity]
@@ -28,6 +29,7 @@ The public interface into the Teleporter Prefab.
   * [OnAfterOffsetChange()]
   * [OnAfterOffsetUsageChange()]
   * [OnAfterSnapToFloorBlinkThresholdChange()]
+  * [OnAfterSnapToFloorEnabledChange()]
   * [OnAfterSnapToFloorThresholdChange()]
   * [OnAfterTargetChange()]
   * [OnAfterTargetValidityChange()]
@@ -148,6 +150,16 @@ The distance between the previous floor and current floor to determine if the sc
 public float SnapToFloorBlinkThreshold { get; set; }
 ```
 
+#### SnapToFloorEnabled
+
+Whether to always attempt to teleport the [Target] to the nearest found floor every frame.
+
+##### Declaration
+
+```
+public bool SnapToFloorEnabled { get; set; }
+```
+
 #### SnapToFloorThreshold
 
 The distance between the previous floor and current floor to determine if a snap to the new floor is required.
@@ -238,6 +250,16 @@ Called after [SnapToFloorBlinkThreshold] has been changed.
 
 ```
 protected virtual void OnAfterSnapToFloorBlinkThresholdChange()
+```
+
+#### OnAfterSnapToFloorEnabledChange()
+
+Called after [SnapToFloorEnabled] has been changed.
+
+##### Declaration
+
+```
+protected virtual void OnAfterSnapToFloorEnabledChange()
 ```
 
 #### OnAfterSnapToFloorThresholdChange()
@@ -354,12 +376,14 @@ public virtual void Teleport(Vector3 destinationPosition)
 [Target]: TeleporterFacade.md#Target
 [TeleporterConfigurator]: TeleporterConfigurator.md
 [Offset]: TeleporterFacade.md#Offset
+[Target]: TeleporterFacade.md#Target
 [ApplyDestinationRotation]: TeleporterFacade.md#ApplyDestinationRotation
 [CameraValidity]: TeleporterFacade.md#CameraValidity
 [DestinationOffset]: TeleporterFacade.md#DestinationOffset
 [Offset]: TeleporterFacade.md#Offset
 [OffsetUsage]: TeleporterFacade.md#OffsetUsage
 [SnapToFloorBlinkThreshold]: TeleporterFacade.md#SnapToFloorBlinkThreshold
+[SnapToFloorEnabled]: TeleporterFacade.md#SnapToFloorEnabled
 [SnapToFloorThreshold]: TeleporterFacade.md#SnapToFloorThreshold
 [Target]: TeleporterFacade.md#Target
 [TargetValidity]: TeleporterFacade.md#TargetValidity
@@ -383,6 +407,7 @@ public virtual void Teleport(Vector3 destinationPosition)
 [Offset]: #Offset
 [OffsetUsage]: #OffsetUsage
 [SnapToFloorBlinkThreshold]: #SnapToFloorBlinkThreshold
+[SnapToFloorEnabled]: #SnapToFloorEnabled
 [SnapToFloorThreshold]: #SnapToFloorThreshold
 [Target]: #Target
 [TargetValidity]: #TargetValidity
@@ -393,6 +418,7 @@ public virtual void Teleport(Vector3 destinationPosition)
 [OnAfterOffsetChange()]: #OnAfterOffsetChange
 [OnAfterOffsetUsageChange()]: #OnAfterOffsetUsageChange
 [OnAfterSnapToFloorBlinkThresholdChange()]: #OnAfterSnapToFloorBlinkThresholdChange
+[OnAfterSnapToFloorEnabledChange()]: #OnAfterSnapToFloorEnabledChange
 [OnAfterSnapToFloorThresholdChange()]: #OnAfterSnapToFloorThresholdChange
 [OnAfterTargetChange()]: #OnAfterTargetChange
 [OnAfterTargetValidityChange()]: #OnAfterTargetValidityChange

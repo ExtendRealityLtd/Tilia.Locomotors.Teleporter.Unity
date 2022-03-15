@@ -52,18 +52,16 @@ MonoBehaviour:
     field: {fileID: 0}
   targetValidity:
     field: {fileID: 0}
+  snapToFloorEnabled: 1
   snapToFloorThreshold: 1e-45
   snapToFloorBlinkThreshold: 0.3
+  destinationOffset: {x: 0, y: 0, z: 0}
   Teleporting:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Tracking.Modification.TransformPropertyApplier+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Teleported:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Tracking.Modification.TransformPropertyApplier+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   configuration: {fileID: 831700923211128871}
 --- !u!1 &6091841197206593970
 GameObject:
@@ -113,6 +111,7 @@ MonoBehaviour:
   facade: {fileID: 6759483569300406686}
   surfaceTeleporter: {fileID: 536479425143457731}
   modifyTeleporter: {fileID: 0}
+  snapToFloorContainer: {fileID: 8756915673802185907}
   surfaceLocatorAliases:
   - {fileID: 2872370309144820499}
   surfaceLocatorRules:
@@ -180,6 +179,8 @@ MonoBehaviour:
   destinationOffset: {x: 0, y: 0, z: 0}
   targetValidity:
     field: {fileID: 0}
+  targetPointValidity:
+    field: {fileID: 0}
   locatorTermination:
     field: {fileID: 0}
   physicsCast: {fileID: 8371699073636397557}
@@ -219,8 +220,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.SurfaceLocator+UnityEvent, Zinnia.Runtime, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &103839708580330939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,8 +286,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.Modification.TransformPropertyApplier+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   AfterTransformUpdated:
     m_PersistentCalls:
       m_Calls:
@@ -325,8 +322,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.Modification.TransformPropertyApplier+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &8989156614657649529
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,11 +360,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7118190462417118764}
     m_Modifications:
-    - target: {fileID: 1163974902123328183, guid: 3f0f7b61639d6a64fbb972b970f62cd8,
-        type: 3}
-      propertyPath: m_Name
-      value: SnapToFloor
-      objectReference: {fileID: 0}
     - target: {fileID: 374839283324289467, guid: 3f0f7b61639d6a64fbb972b970f62cd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -424,6 +414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163974902123328183, guid: 3f0f7b61639d6a64fbb972b970f62cd8,
+        type: 3}
+      propertyPath: m_Name
+      value: SnapToFloor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f0f7b61639d6a64fbb972b970f62cd8, type: 3}
