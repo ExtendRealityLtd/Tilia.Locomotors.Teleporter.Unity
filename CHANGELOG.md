@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.8.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.7.2...v1.8.0) (2022-03-15)
+
+#### Features
+
+* **Facade:** add toggle to enable/disable snap to floor logic ([e2a21e3](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/e2a21e33fc280b37bf10e487993e7ece9ec691ae))
+  > The Snap To Floor logic can now be turned on or off by using the new `Snap To Floor Enabled` checkbox on the Teleporter Facade to make it easier and more obvious to change the state of this container that holds the snapping logic.
+
+#### Bug Fixes
+
+* **SnapToFloor:** disable camera color overlay by default ([7fefc11](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/7fefc1149380abc7eab189f9dffcb3a3cf140c7b))
+  > If the CameraColorOverlay object is not disabled by default then the camera will do an initial fade if the destination offset is higher than 0 for the Y axis. The process is already there to enable the CameraColorOverlay after the first snap to floor logic run but the GameObject was left enabled by default so it will do the fade on the first snap to floor logic run.
+* **TeleporterConfigurator:** configure offsets when enabled ([59504e9](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/59504e9def52be8786d39de8722750e7bce05c91))
+  > The Surface Locator offsets were not being configured and setup when the configurator was enabled and the code that did the configuration required the entire facade to be disabled then re-enabled which would cause an infinite loop if called in the OnEnable.
+  > 
+  > This has been fixed by not needing the whole Facade to be disabled and instead a simple flag has been added that delays the setting of the threshold until the offsets have been set up, which means the offset set up can be run in the OnEnable.
+
 ### [1.7.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.7.1...v1.7.2) (2022-03-15)
 
 #### Miscellaneous Chores
