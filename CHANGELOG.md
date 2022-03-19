@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.8.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.8.1...v1.8.2) (2022-03-19)
+
+#### Bug Fixes
+
+* **SnapToFloor:** re-enable the camera color overlay component ([dfcbd7f](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/dfcbd7f11362a1473fe337bf2363bdf95188cef0))
+  > The CameraColorOverlay component had been disabled to prevent an initial blink when the teleporter started at an offset height but this caused the blink to be always disabled if no offset height was provided.
+  > 
+  > The component is now enabled by default and at a later date a further fix for the offset height blink will be added.
+
 ### [1.8.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.8.0...v1.8.1) (2022-03-15)
 
 #### Miscellaneous Chores
