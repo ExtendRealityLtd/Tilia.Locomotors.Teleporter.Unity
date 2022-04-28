@@ -23,6 +23,11 @@ The public interface into the Teleporter Prefab.
   * [Target]
   * [TargetValidity]
 * [Methods]
+  * [ClearCameraValidity()]
+  * [ClearConfiguration()]
+  * [ClearOffset()]
+  * [ClearTarget()]
+  * [ClearTargetValidity()]
   * [OnAfterApplyDestinationRotationChange()]
   * [OnAfterCameraValidityChange()]
   * [OnAfterDestinationOffsetChange()]
@@ -191,6 +196,56 @@ public RuleContainer TargetValidity { get; set; }
 ```
 
 ### Methods
+
+#### ClearCameraValidity()
+
+Clears [CameraValidity].
+
+##### Declaration
+
+```
+public virtual void ClearCameraValidity()
+```
+
+#### ClearConfiguration()
+
+Clears [Configuration].
+
+##### Declaration
+
+```
+public virtual void ClearConfiguration()
+```
+
+#### ClearOffset()
+
+Clears [Offset].
+
+##### Declaration
+
+```
+public virtual void ClearOffset()
+```
+
+#### ClearTarget()
+
+Clears [Target].
+
+##### Declaration
+
+```
+public virtual void ClearTarget()
+```
+
+#### ClearTargetValidity()
+
+Clears [TargetValidity].
+
+##### Declaration
+
+```
+public virtual void ClearTargetValidity()
+```
 
 #### OnAfterApplyDestinationRotationChange()
 
@@ -377,6 +432,11 @@ public virtual void Teleport(Vector3 destinationPosition)
 [TeleporterConfigurator]: TeleporterConfigurator.md
 [Offset]: TeleporterFacade.md#Offset
 [Target]: TeleporterFacade.md#Target
+[CameraValidity]: TeleporterFacade.md#CameraValidity
+[Configuration]: TeleporterFacade.md#Configuration
+[Offset]: TeleporterFacade.md#Offset
+[Target]: TeleporterFacade.md#Target
+[TargetValidity]: TeleporterFacade.md#TargetValidity
 [ApplyDestinationRotation]: TeleporterFacade.md#ApplyDestinationRotation
 [CameraValidity]: TeleporterFacade.md#CameraValidity
 [DestinationOffset]: TeleporterFacade.md#DestinationOffset
@@ -412,6 +472,11 @@ public virtual void Teleport(Vector3 destinationPosition)
 [Target]: #Target
 [TargetValidity]: #TargetValidity
 [Methods]: #Methods
+[ClearCameraValidity()]: #ClearCameraValidity
+[ClearConfiguration()]: #ClearConfiguration
+[ClearOffset()]: #ClearOffset
+[ClearTarget()]: #ClearTarget
+[ClearTargetValidity()]: #ClearTargetValidity
 [OnAfterApplyDestinationRotationChange()]: #OnAfterApplyDestinationRotationChange
 [OnAfterCameraValidityChange()]: #OnAfterCameraValidityChange
 [OnAfterDestinationOffsetChange()]: #OnAfterDestinationOffsetChange
