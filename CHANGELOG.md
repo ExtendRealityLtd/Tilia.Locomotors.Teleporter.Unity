@@ -1,5 +1,14 @@
 # Changelog
 
+### [2.0.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.0.1...v2.0.2) (2022-04-28)
+
+#### Bug Fixes
+
+* **prefabs:** ensure snap to floor enabled turns off correct object ([3468aaa](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/3468aaa4fa1a994b3558c8278fc4b66a12ab37e8))
+  > The `Snap To Floor Enabled` property was not working correctly as it was turning off the entire Snap To Floor prefab meaning the blink logic was also not working as the blink/fade logic is contained within the Snap To Floor prefab.
+  > 
+  > The fix is to just turn off the actual surface location logic so the blink is still accessible.
+
 ### [2.0.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.0.0...v2.0.1) (2022-04-28)
 
 #### Miscellaneous Chores
