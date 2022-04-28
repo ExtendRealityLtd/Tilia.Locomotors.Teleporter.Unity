@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.8.2...v2.0.0) (2022-04-28)
+
+#### :warning: BREAKING CHANGES :warning:
+
+* **Malimbe:** This removes the last remaining elements of Malimbe and whilst it does not cause any breaking changes within this package, it removes Malimbe as a dependency which other projects that rely on this package may piggy back off this Malimbe dependency so it will break any project like that.
+
+All of the previous functionality from Malimbe has been replicated in standard code without the need for it to be weaved by the Malimbe helper tags. ([08a47bd](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/08a47bd1b17c4d2fd10bdcfe629c3b99e82bce0e))
+
+#### Features
+
+* **Malimbe:** remove malimbe dependency ([08a47bd](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/08a47bd1b17c4d2fd10bdcfe629c3b99e82bce0e))
+
 ### [1.8.2](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v1.8.1...v1.8.2) (2022-03-19)
 
 #### Bug Fixes
