@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5590959520585286125}
-  - {fileID: 4571630719193713254}
+  - {fileID: 5205323543956018948}
   - {fileID: 2610266345189395638}
   - {fileID: 235444694536354417}
   - {fileID: 8331258515199282043}
@@ -219,6 +219,37 @@ MonoBehaviour:
     field: {fileID: 5655712967484036375}
   onlyProcessOnActiveAndEnabled: 1
   interval: 0
+--- !u!1 &2088734373560214381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5205323543956018948}
+  m_Layer: 0
+  m_Name: SnapToFloorLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5205323543956018948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088734373560214381}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4571630719193713254}
+  m_Father: {fileID: 374839283324289467}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2235965453378203669
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +409,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  value: 0
   changeDistance: 0.01
   checkAxis:
     xState: 0
@@ -414,8 +446,8 @@ Transform:
   - {fileID: 8757416647604212321}
   - {fileID: 92987762500409198}
   - {fileID: 3077503582736538865}
-  m_Father: {fileID: 374839283324289467}
-  m_RootOrder: 1
+  m_Father: {fileID: 5205323543956018948}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4294519157332793404
 GameObject:
@@ -500,6 +532,7 @@ MonoBehaviour:
   Deactivated:
     m_PersistentCalls:
       m_Calls: []
+  value: 0
   changeDistance: 0.3
   checkAxis:
     xState: 0

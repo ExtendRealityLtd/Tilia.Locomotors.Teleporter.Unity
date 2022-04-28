@@ -48,7 +48,7 @@ MonoBehaviour:
   facade: {fileID: 5950170169637845304}
   surfaceTeleporter: {fileID: 4061554705455466048}
   modifyTeleporter: {fileID: 0}
-  snapToFloorContainer: {fileID: 5414941269016037605}
+  snapToFloorContainer: {fileID: 5187678087625464127}
   surfaceLocatorAliases:
   - {fileID: 1549196070032961349}
   surfaceLocatorRules:
@@ -446,6 +446,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406d478cdbf496a4ead48dfdc7df8d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5187678087625464127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2088734373560214381, guid: 3f0f7b61639d6a64fbb972b970f62cd8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558078218179066450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7732585858515215388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3480526847488826958, guid: 3f0f7b61639d6a64fbb972b970f62cd8,
