@@ -43,6 +43,11 @@ The public interface into the Teleporter Prefab.
   * [Teleport(Transform)]
   * [Teleport(TransformData)]
   * [Teleport(Vector3)]
+  * [TeleportIgnoreFloor(GameObject)]
+  * [TeleportIgnoreFloor(Transform)]
+  * [TeleportIgnoreFloor(TransformData)]
+  * [TeleportIgnoreFloor(Vector3)]
+  * [Vector3ToTransformData(Vector3)]
 
 ## Details
 
@@ -365,7 +370,7 @@ public virtual void SetOffsetUsage(int offsetTypeIndex)
 
 #### Teleport(GameObject)
 
-Attempts to teleport the [Target].
+Attempts to teleport the [Target] above a collidable floor.
 
 ##### Declaration
 
@@ -381,7 +386,7 @@ public virtual void Teleport(GameObject destination)
 
 #### Teleport(Transform)
 
-Attempts to teleport the [Target].
+Attempts to teleport the [Target] above a collidable floor.
 
 ##### Declaration
 
@@ -397,7 +402,7 @@ public virtual void Teleport(Transform destination)
 
 #### Teleport(TransformData)
 
-Attempts to teleport the [Target].
+Attempts to teleport the [Target] above a collidable floor.
 
 ##### Declaration
 
@@ -413,7 +418,7 @@ public virtual void Teleport(TransformData destination)
 
 #### Teleport(Vector3)
 
-Attempts to teleport the [Target] to the given world position.
+Attempts to teleport the [Target] to the given world position above a collidable floor.
 
 ##### Declaration
 
@@ -426,6 +431,92 @@ public virtual void Teleport(Vector3 destinationPosition)
 | Type | Name | Description |
 | --- | --- | --- |
 | Vector3 | destinationPosition | n/a |
+
+#### TeleportIgnoreFloor(GameObject)
+
+Attempts to teleport the [Target] but does not require a collidable floor underneath the destination.
+
+##### Declaration
+
+```
+public virtual void TeleportIgnoreFloor(GameObject destination)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | destination | The location to attempt to teleport to. |
+
+#### TeleportIgnoreFloor(Transform)
+
+Attempts to teleport the [Target] but does not require a collidable floor underneath the destination.
+
+##### Declaration
+
+```
+public virtual void TeleportIgnoreFloor(Transform destination)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| Transform | destination | The location to attempt to teleport to. |
+
+#### TeleportIgnoreFloor(TransformData)
+
+Attempts to teleport the [Target] but does not require a collidable floor underneath the destination.
+
+##### Declaration
+
+```
+public virtual void TeleportIgnoreFloor(TransformData destination)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| TransformData | destination | The location to attempt to teleport to. |
+
+#### TeleportIgnoreFloor(Vector3)
+
+Attempts to teleport the [Target] but does not require a collidable floor underneath the destination.
+
+##### Declaration
+
+```
+public virtual void TeleportIgnoreFloor(Vector3 destinationPosition)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| Vector3 | destinationPosition | n/a |
+
+#### Vector3ToTransformData(Vector3)
+
+Converts Vector3 to TransformData.
+
+##### Declaration
+
+```
+protected virtual TransformData Vector3ToTransformData(Vector3 data)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| Vector3 | data | The data to convert. |
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| TransformData | The converted data. |
 
 [Tilia.Locomotors.Teleporter]: README.md
 [Target]: TeleporterFacade.md#Target
@@ -449,6 +540,10 @@ public virtual void Teleport(Vector3 destinationPosition)
 [TargetValidity]: TeleporterFacade.md#TargetValidity
 [OffsetUsage]: TeleporterFacade.md#OffsetUsage
 [TeleporterFacade.OffsetType]: TeleporterFacade.OffsetType.md
+[Target]: TeleporterFacade.md#Target
+[Target]: TeleporterFacade.md#Target
+[Target]: TeleporterFacade.md#Target
+[Target]: TeleporterFacade.md#Target
 [Target]: TeleporterFacade.md#Target
 [Target]: TeleporterFacade.md#Target
 [Target]: TeleporterFacade.md#Target
@@ -492,3 +587,8 @@ public virtual void Teleport(Vector3 destinationPosition)
 [Teleport(Transform)]: #TeleportTransform
 [Teleport(TransformData)]: #TeleportTransformData
 [Teleport(Vector3)]: #TeleportVector3
+[TeleportIgnoreFloor(GameObject)]: #TeleportIgnoreFloorGameObject
+[TeleportIgnoreFloor(Transform)]: #TeleportIgnoreFloorTransform
+[TeleportIgnoreFloor(TransformData)]: #TeleportIgnoreFloorTransformData
+[TeleportIgnoreFloor(Vector3)]: #TeleportIgnoreFloorVector3
+[Vector3ToTransformData(Vector3)]: #Vector3ToTransformDataVector3

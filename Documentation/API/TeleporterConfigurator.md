@@ -22,6 +22,7 @@ Sets up the Teleport Prefab based on the provided user settings.
   * [SurfaceLocatorAliases]
   * [SurfaceLocatorRules]
   * [SurfaceTeleporter]
+  * [TeleportLogicProxy]
   * [TransformPropertyApplierAliases]
   * [TransformPropertyApplierIgnoreOffsetAliases]
 * [Methods]
@@ -40,6 +41,7 @@ Sets up the Teleport Prefab based on the provided user settings.
   * [OnEnable()]
   * [ResetOffsetAtEndOfFrame()]
   * [Teleport(TransformData)]
+  * [TeleportIgnoreFloor(TransformData)]
 
 ## Details
 
@@ -190,6 +192,16 @@ The SurfaceLocator to use for the teleporting event.
 
 ```
 public SurfaceLocator SurfaceTeleporter { get; protected set; }
+```
+
+#### TeleportLogicProxy
+
+The TransformDataProxyEmitter that holds the teleport logic.
+
+##### Declaration
+
+```
+public TransformDataProxyEmitter TeleportLogicProxy { get; protected set; }
 ```
 
 #### TransformPropertyApplierAliases
@@ -399,8 +411,25 @@ public virtual void Teleport(TransformData destination)
 | --- | --- | --- |
 | TransformData | destination | The location to attempt to teleport to. |
 
+#### TeleportIgnoreFloor(TransformData)
+
+Attempts to teleport the [Target] to the exact position without attempting to find the nearest floor.
+
+##### Declaration
+
+```
+public virtual void TeleportIgnoreFloor(TransformData destination)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| TransformData | destination | The location to attempt to teleport to. |
+
 [Tilia.Locomotors.Teleporter]: README.md
 [TeleporterFacade]: TeleporterFacade.md
+[Target]: TeleporterFacade.md#Tilia_Locomotors_Teleporter_TeleporterFacade_Target
 [Target]: TeleporterFacade.md#Tilia_Locomotors_Teleporter_TeleporterFacade_Target
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
@@ -420,6 +449,7 @@ public virtual void Teleport(TransformData destination)
 [SurfaceLocatorAliases]: #SurfaceLocatorAliases
 [SurfaceLocatorRules]: #SurfaceLocatorRules
 [SurfaceTeleporter]: #SurfaceTeleporter
+[TeleportLogicProxy]: #TeleportLogicProxy
 [TransformPropertyApplierAliases]: #TransformPropertyApplierAliases
 [TransformPropertyApplierIgnoreOffsetAliases]: #TransformPropertyApplierIgnoreOffsetAliases
 [Methods]: #Methods
@@ -438,3 +468,4 @@ public virtual void Teleport(TransformData destination)
 [OnEnable()]: #OnEnable
 [ResetOffsetAtEndOfFrame()]: #ResetOffsetAtEndOfFrame
 [Teleport(TransformData)]: #TeleportTransformData
+[TeleportIgnoreFloor(TransformData)]: #TeleportIgnoreFloorTransformData

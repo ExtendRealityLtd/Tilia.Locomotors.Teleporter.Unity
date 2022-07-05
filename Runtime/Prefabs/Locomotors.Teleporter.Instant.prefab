@@ -109,8 +109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   facade: {fileID: 6759483569300406686}
+  teleportLogicProxy: {fileID: 3445463111050495131}
   surfaceTeleporter: {fileID: 536479425143457731}
-  modifyTeleporter: {fileID: 0}
+  modifyTeleporter: {fileID: 103839708580330939}
   snapToFloorContainer: {fileID: 8456979111799426409}
   surfaceLocatorAliases:
   - {fileID: 2872370309144820499}
@@ -136,6 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1472956425516877046}
   - component: {fileID: 536479425143457731}
+  - component: {fileID: 3445463111050495131}
   - component: {fileID: 103839708580330939}
   m_Layer: 0
   m_Name: Teleportation
@@ -187,6 +189,35 @@ MonoBehaviour:
   SurfaceLocated:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 3445463111050495131}
+        m_MethodName: Receive
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3445463111050495131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210428687401589529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a305eb4700f2a7546b29ea5efe8c17dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  payload:
+    transform: {fileID: 0}
+    useLocalValues: 0
+  Emitted:
+    m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 103839708580330939}
         m_MethodName: set_Source
         m_Mode: 0
@@ -220,6 +251,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  receiveValidity:
+    field: {fileID: 0}
 --- !u!114 &103839708580330939
 MonoBehaviour:
   m_ObjectHideFlags: 0
