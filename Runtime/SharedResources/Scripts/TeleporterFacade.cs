@@ -349,7 +349,16 @@
         }
 
         /// <summary>
-        /// Attempts to teleport the <see cref="Target"/>.
+        /// Sets <see cref="OffsetUsage"/>.
+        /// </summary>
+        /// <param name="offsetTypeIndex">The index of the <see cref="OffsetType"/>.</param>
+        public virtual void SetOffsetUsage(int offsetTypeIndex)
+        {
+            OffsetUsage = EnumExtensions.GetByIndex<OffsetType>(offsetTypeIndex);
+        }
+
+        /// <summary>
+        /// Attempts to teleport the <see cref="Target"/> above a collidable floor.
         /// </summary>
         /// <param name="destination">The location to attempt to teleport to.</param>
         public virtual void Teleport(Transform destination)
@@ -358,7 +367,7 @@
         }
 
         /// <summary>
-        /// Attempts to teleport the <see cref="Target"/>.
+        /// Attempts to teleport the <see cref="Target"/> above a collidable floor.
         /// </summary>
         /// <param name="destination">The location to attempt to teleport to.</param>
         public virtual void Teleport(GameObject destination)
@@ -367,7 +376,7 @@
         }
 
         /// <summary>
-        /// Attempts to teleport the <see cref="Target"/>.
+        /// Attempts to teleport the <see cref="Target"/> above a collidable floor.
         /// </summary>
         /// <param name="destination">The location to attempt to teleport to.</param>
         public virtual void Teleport(TransformData destination)
@@ -376,25 +385,62 @@
         }
 
         /// <summary>
-        /// Attempts to teleport the <see cref="Target"/> to the given world position.
+        /// Attempts to teleport the <see cref="Target"/> to the given world position above a collidable floor.
         /// </summary>
         /// <param name="destination">The world position to attempt to teleport to.</param>
         public virtual void Teleport(Vector3 destinationPosition)
         {
-            GameObject transformLocation = new GameObject();
-            TransformData destination = new TransformData(transformLocation.transform);
-            destination.PositionOverride = destinationPosition;
-            Teleport(destination);
-            Destroy(transformLocation);
+            Teleport(Vector3ToTransformData(destinationPosition));
         }
 
         /// <summary>
-        /// Sets <see cref="OffsetUsage"/>.
+        /// Attempts to teleport the <see cref="Target"/> but does not require a collidable floor underneath the destination.
         /// </summary>
-        /// <param name="offsetTypeIndex">The index of the <see cref="OffsetType"/>.</param>
-        public virtual void SetOffsetUsage(int offsetTypeIndex)
+        /// <param name="destination">The location to attempt to teleport to.</param>
+        public virtual void TeleportIgnoreFloor(Transform destination)
         {
-            OffsetUsage = EnumExtensions.GetByIndex<OffsetType>(offsetTypeIndex);
+            TeleportIgnoreFloor(new TransformData(destination));
+        }
+
+        /// <summary>
+        /// Attempts to teleport the <see cref="Target"/> but does not require a collidable floor underneath the destination.
+        /// </summary>
+        /// <param name="destination">The location to attempt to teleport to.</param>
+        public virtual void TeleportIgnoreFloor(GameObject destination)
+        {
+            TeleportIgnoreFloor(new TransformData(destination));
+        }
+
+        /// <summary>
+        /// Attempts to teleport the <see cref="Target"/> but does not require a collidable floor underneath the destination.
+        /// </summary>
+        /// <param name="destination">The location to attempt to teleport to.</param>
+        public virtual void TeleportIgnoreFloor(TransformData destination)
+        {
+            Configuration.TeleportIgnoreFloor(destination);
+        }
+
+        /// <summary>
+        /// Attempts to teleport the <see cref="Target"/> but does not require a collidable floor underneath the destination.
+        /// </summary>
+        /// <param name="destination">The world position to attempt to teleport to.</param>
+        public virtual void TeleportIgnoreFloor(Vector3 destinationPosition)
+        {
+            TeleportIgnoreFloor(Vector3ToTransformData(destinationPosition));
+        }
+
+        /// <summary>
+        /// Converts <see cref="Vector3"/> to <see cref="TransformData"/>.
+        /// </summary>
+        /// <param name="data">The data to convert.</param>
+        /// <returns>The converted data.</returns>
+        protected virtual TransformData Vector3ToTransformData(Vector3 data)
+        {
+            GameObject transformLocation = new GameObject();
+            TransformData destination = new TransformData(transformLocation.transform);
+            destination.PositionOverride = data;
+            Destroy(transformLocation);
+            return destination;
         }
 
         /// <summary>

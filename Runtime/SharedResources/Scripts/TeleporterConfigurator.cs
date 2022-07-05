@@ -7,6 +7,7 @@
     using Zinnia.Data.Attribute;
     using Zinnia.Data.Enum;
     using Zinnia.Data.Type;
+    using Zinnia.Event.Proxy;
     using Zinnia.Tracking;
     using Zinnia.Tracking.Modification;
     using Zinnia.Visual;
@@ -40,6 +41,24 @@
 
         #region Teleporter Settings
         [Header("Teleporter Settings")]
+        [Tooltip("The TransformDataProxyEmitter that holds the teleport logic.")]
+        [SerializeField]
+        [Restricted]
+        private TransformDataProxyEmitter teleportLogicProxy;
+        /// <summary>
+        /// The <see cref="TransformDataProxyEmitter"/> that holds the teleport logic.
+        /// </summary>
+        public TransformDataProxyEmitter TeleportLogicProxy
+        {
+            get
+            {
+                return teleportLogicProxy;
+            }
+            protected set
+            {
+                teleportLogicProxy = value;
+            }
+        }
         [Tooltip("The SurfaceLocator to use for the teleporting event.")]
         [SerializeField]
         [Restricted]
@@ -252,12 +271,23 @@
             if (SurfaceTeleporter != null)
             {
                 SurfaceTeleporter.Locate(destination);
+                return;
             }
-
-            if (ModifyTeleporter != null)
+            else
             {
-                ModifyTeleporter.Source = destination;
-                ModifyTeleporter.Apply();
+                TeleportIgnoreFloor(destination);
+            }
+        }
+
+        /// <summary>
+        /// Attempts to teleport the <see cref="TeleporterFacade.Target"/> to the exact position without attempting to find the nearest floor.
+        /// </summary>
+        /// <param name="destination">The location to attempt to teleport to.</param>
+        public virtual void TeleportIgnoreFloor(TransformData destination)
+        {
+            if (TeleportLogicProxy != null)
+            {
+                TeleportLogicProxy.Receive(destination);
             }
         }
 
