@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.0.6...v2.1.0) (2022-07-05)
+
+#### Features
+
+* **Facade:** add teleport ignore floor method ([54b0776](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/54b0776343fdd8743f2c76788d79a2bd4d9e773b))
+  > The new TeleportIgnoreFloor method will teleport the Target to the given destination even if there is no collidable floor underneath the destination.
+
 ### [2.0.6](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.0.5...v2.0.6) (2022-06-19)
 
 #### Miscellaneous Chores
