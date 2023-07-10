@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7466508404443556258}
   - component: {fileID: 5950170169637845304}
+  - component: {fileID: 7359690121777799856}
   m_Layer: 0
   m_Name: Locomotors.Teleporter.Dash
   m_TagString: Untagged
@@ -127,6 +128,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   configuration: {fileID: 1683957728789067024}
+--- !u!114 &7359690121777799856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2262987785075144963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11862926720f544fb5d904995c2b57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source:
+    field: {fileID: 7561676446728792176}
+  onlyProcessOnActiveAndEnabled: 1
+  interval: 0
 --- !u!1 &5435332709518248266
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,3 +580,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6558078218179066450}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7561676446728792176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3743196964653568546, guid: 3f0f7b61639d6a64fbb972b970f62cd8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6558078218179066450}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0eab237e25807459af1c5caf4d3d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

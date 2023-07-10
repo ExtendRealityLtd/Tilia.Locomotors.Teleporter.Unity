@@ -111,7 +111,7 @@ The scene Cameras to set the CameraColorOverlays to affect.
 ##### Declaration
 
 ```
-public List<CameraColorOverlay> CameraColorOverlays { get; protected set; }
+public List<CameraColorOverlay> CameraColorOverlays { get; set; }
 ```
 
 #### Facade
@@ -121,7 +121,7 @@ The public interface facade.
 ##### Declaration
 
 ```
-public TeleporterFacade Facade { get; protected set; }
+public TeleporterFacade Facade { get; set; }
 ```
 
 #### ModifyTeleporter
@@ -131,7 +131,7 @@ The TransformPropertyApplier to use for the teleporting event.
 ##### Declaration
 
 ```
-public TransformPropertyApplier ModifyTeleporter { get; protected set; }
+public TransformPropertyApplier ModifyTeleporter { get; set; }
 ```
 
 #### SnapToFloorBlinkThresholdController
@@ -141,7 +141,7 @@ The SurfaceChangeAction that holds the threshold of whether a blink should occur
 ##### Declaration
 
 ```
-public SurfaceChangeAction SnapToFloorBlinkThresholdController { get; protected set; }
+public SurfaceChangeAction SnapToFloorBlinkThresholdController { get; set; }
 ```
 
 #### SnapToFloorContainer
@@ -151,7 +151,7 @@ The GameObject that contains the snap to floor controller logic.
 ##### Declaration
 
 ```
-public GameObject SnapToFloorContainer { get; protected set; }
+public GameObject SnapToFloorContainer { get; set; }
 ```
 
 #### SnapToFloorThresholdController
@@ -161,7 +161,7 @@ The SurfaceChangeAction that holds the threshold of whether a snap to floor shou
 ##### Declaration
 
 ```
-public SurfaceChangeAction SnapToFloorThresholdController { get; protected set; }
+public SurfaceChangeAction SnapToFloorThresholdController { get; set; }
 ```
 
 #### SurfaceLocatorAliases
@@ -171,7 +171,7 @@ The SurfaceLocator to set aliases on.
 ##### Declaration
 
 ```
-public List<SurfaceLocator> SurfaceLocatorAliases { get; protected set; }
+public List<SurfaceLocator> SurfaceLocatorAliases { get; set; }
 ```
 
 #### SurfaceLocatorRules
@@ -181,7 +181,7 @@ The SurfaceLocator to set rules on.
 ##### Declaration
 
 ```
-public List<SurfaceLocator> SurfaceLocatorRules { get; protected set; }
+public List<SurfaceLocator> SurfaceLocatorRules { get; set; }
 ```
 
 #### SurfaceTeleporter
@@ -191,7 +191,7 @@ The SurfaceLocator to use for the teleporting event.
 ##### Declaration
 
 ```
-public SurfaceLocator SurfaceTeleporter { get; protected set; }
+public SurfaceLocator SurfaceTeleporter { get; set; }
 ```
 
 #### TeleportLogicProxy
@@ -201,7 +201,7 @@ The TransformDataProxyEmitter that holds the teleport logic.
 ##### Declaration
 
 ```
-public TransformDataProxyEmitter TeleportLogicProxy { get; protected set; }
+public TransformDataProxyEmitter TeleportLogicProxy { get; set; }
 ```
 
 #### TransformPropertyApplierAliases
@@ -211,7 +211,7 @@ The TransformPropertyApplier collection to set aliases on.
 ##### Declaration
 
 ```
-public List<TransformPropertyApplier> TransformPropertyApplierAliases { get; protected set; }
+public List<TransformPropertyApplier> TransformPropertyApplierAliases { get; set; }
 ```
 
 #### TransformPropertyApplierIgnoreOffsetAliases
@@ -221,7 +221,7 @@ The TransformPropertyApplier collection to ignore offsets on.
 ##### Declaration
 
 ```
-public List<TransformPropertyApplier> TransformPropertyApplierIgnoreOffsetAliases { get; protected set; }
+public List<TransformPropertyApplier> TransformPropertyApplierIgnoreOffsetAliases { get; set; }
 ```
 
 ### Methods

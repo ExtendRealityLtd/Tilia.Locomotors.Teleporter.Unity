@@ -32,7 +32,7 @@
             {
                 return facade;
             }
-            protected set
+            set
             {
                 facade = value;
             }
@@ -54,7 +54,7 @@
             {
                 return teleportLogicProxy;
             }
-            protected set
+            set
             {
                 teleportLogicProxy = value;
             }
@@ -72,7 +72,7 @@
             {
                 return surfaceTeleporter;
             }
-            protected set
+            set
             {
                 surfaceTeleporter = value;
             }
@@ -90,7 +90,7 @@
             {
                 return modifyTeleporter;
             }
-            protected set
+            set
             {
                 modifyTeleporter = value;
             }
@@ -108,7 +108,7 @@
             {
                 return snapToFloorContainer;
             }
-            protected set
+            set
             {
                 snapToFloorContainer = value;
             }
@@ -130,7 +130,7 @@
             {
                 return surfaceLocatorAliases;
             }
-            protected set
+            set
             {
                 surfaceLocatorAliases = value;
             }
@@ -148,7 +148,7 @@
             {
                 return surfaceLocatorRules;
             }
-            protected set
+            set
             {
                 surfaceLocatorRules = value;
             }
@@ -166,7 +166,7 @@
             {
                 return transformPropertyApplierAliases;
             }
-            protected set
+            set
             {
                 transformPropertyApplierAliases = value;
             }
@@ -184,7 +184,7 @@
             {
                 return transformPropertyApplierIgnoreOffsetAliases;
             }
-            protected set
+            set
             {
                 transformPropertyApplierIgnoreOffsetAliases = value;
             }
@@ -202,7 +202,7 @@
             {
                 return cameraColorOverlays;
             }
-            protected set
+            set
             {
                 cameraColorOverlays = value;
             }
@@ -220,7 +220,7 @@
             {
                 return snapToFloorThresholdController;
             }
-            protected set
+            set
             {
                 snapToFloorThresholdController = value;
             }
@@ -238,7 +238,7 @@
             {
                 return snapToFloorBlinkThresholdController;
             }
-            protected set
+            set
             {
                 snapToFloorBlinkThresholdController = value;
             }
