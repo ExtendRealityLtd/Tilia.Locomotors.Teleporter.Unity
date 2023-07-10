@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d120f24812793439e55c40dd45fccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emitEvents: 1
   ActivationStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -388,6 +389,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3660979598859947251}
+        m_MethodName: ResetToDefaultValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   ValueChanged:
     m_PersistentCalls:
@@ -492,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d120f24812793439e55c40dd45fccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emitEvents: 1
   ActivationStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -522,6 +535,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7218734259541283729}
+        m_MethodName: ResetToDefaultValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
   ValueChanged:
     m_PersistentCalls:

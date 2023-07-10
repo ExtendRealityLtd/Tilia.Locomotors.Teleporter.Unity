@@ -117,7 +117,7 @@ The linked Internal Setup.
 ##### Declaration
 
 ```
-public TeleporterConfigurator Configuration { get; protected set; }
+public TeleporterConfigurator Configuration { get; set; }
 ```
 
 #### DestinationOffset

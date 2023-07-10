@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8762128706450136148}
   - component: {fileID: 6759483569300406686}
+  - component: {fileID: 3417548301590814049}
   m_Layer: 0
   m_Name: Locomotors.Teleporter.Instant
   m_TagString: Untagged
@@ -63,6 +64,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   configuration: {fileID: 831700923211128871}
+--- !u!114 &3417548301590814049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2787178629607972807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11862926720f544fb5d904995c2b57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source:
+    field: {fileID: 6508568598066199590}
+  onlyProcessOnActiveAndEnabled: 1
+  interval: 0
 --- !u!1 &6091841197206593970
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,3 +574,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7611529125206978052}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6508568598066199590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3743196964653568546, guid: 3f0f7b61639d6a64fbb972b970f62cd8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7611529125206978052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0eab237e25807459af1c5caf4d3d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
