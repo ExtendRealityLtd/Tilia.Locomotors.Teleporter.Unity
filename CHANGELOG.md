@@ -1,5 +1,16 @@
 # Changelog
 
+### [2.1.17](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.1.16...v2.1.17) (2023-07-10)
+
+#### Bug Fixes
+
+* **Prefabs:** ensure snap to floor moves along sloped objects ([9627390](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/96273901b9a6a50e89c787e887b84307195bb3fe))
+  > The Snap To Floor logic was not moving along sloped objects because the surface change action was only triggering once when the surface changed, but if the position changed over the same object then it was not triggering a new change event.
+  > 
+  > This has been fixed now by an update to the Zinnia Action class that allows the action value to be reset so it is now reset after the activated action is emitted in the surface change action so the next time it is checked, the action can still be emitted.
+  > 
+  > The MomentProcessor within the teleporter prefabs is also exposed onto a top level MomentProcess on the teleporter prefabs so it can be easily added to another MomentProcessor.
+
 ### [2.1.16](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.1.15...v2.1.16) (2023-07-10)
 
 #### Miscellaneous Chores
