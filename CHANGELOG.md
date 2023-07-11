@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.2.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.1.17...v2.2.0) (2023-07-11)
+
+#### Features
+
+* **prefabs:** add pause/resume snap to floor logic ([c0d6c83](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/c0d6c83b2e927866f4d35669d20cf9dff9ec82b7))
+  > The SnapToFloor prefab now has two EmptyEventProxyEmitters that can just pause or resume the Snap To Floor logic without turning it off completely, which causes a complete reset.
+  > 
+  > The pause logic, just turns off the component that physically does the moving of the target and turns off the camera fade logic.
+  > 
+  > The internals of the prefab have also been tidied up into an `Internal` GameObject to keep it neater.
+
 ### [2.1.17](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.1.16...v2.1.17) (2023-07-10)
 
 #### Bug Fixes
