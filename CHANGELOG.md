@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.2.1](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.2.0...v2.2.1) (2023-09-30)
+
+#### Bug Fixes
+
+* **prefabs:** remove empty listener from pause snapping ([dd0194d](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/commit/dd0194dbbf6e15eebd34294bf467d7278b27d2a6))
+  > The Pause Snapping Logic had an empty listener that has now been removed as it wasn't doing anything.
+
 ## [2.2.0](https://github.com/ExtendRealityLtd/Tilia.Locomotors.Teleporter.Unity/compare/v2.1.17...v2.2.0) (2023-07-11)
 
 #### Features
